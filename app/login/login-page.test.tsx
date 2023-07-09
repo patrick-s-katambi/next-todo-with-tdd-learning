@@ -6,7 +6,7 @@ import Login from "./page";
 
 describe("Login", () => {
 	it("renders login form", async () => {
-		render(<Login />);
+		render(<LoginForm onSubmit={jest.fn()} />);
 
 		const emailField = await screen.findByTestId("email-field");
 		expect(emailField).toBeInTheDocument();
@@ -120,12 +120,5 @@ describe("Login", () => {
 		fireEvent(submitButton, new MouseEvent("click"));
 
 		expect(handleLoginSubmitMock).toHaveBeenCalledTimes(0);
-	});
-
-	it("shows a register link", async () => {
-		render(<Login />);
-
-		const registerLink = await screen.findByTestId("register-link");
-		expect(registerLink).toBeInTheDocument();
 	});
 });

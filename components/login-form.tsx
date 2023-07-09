@@ -55,7 +55,7 @@ const LoginForm: React.FC<LoginFormI> = ({ onSubmit }) => {
 					}
 				/>
 
-				<Button disabled={shouldDisableForm} type="submit" variant="outline" data-testid="login-submit-btn">
+				<Button disabled={shouldDisableForm} type="submit" data-testid="login-submit-btn">
 					Login
 				</Button>
 			</form>

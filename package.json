@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch --verbose",
+    "test": "jest --coverage --verbose --watch",
     "cypress": "cypress open"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
+    "next-router-mock": "^0.9.7",
     "next-themes": "^0.2.1",
     "postcss": "8.4.25",
     "react": "18.2.0",
