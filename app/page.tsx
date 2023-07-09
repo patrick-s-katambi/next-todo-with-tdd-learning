@@ -1,12 +1,11 @@
-import Link from "next/link";
+import { LinkCustom } from "@/components/ui/link";
 
 export default function Home() {
 	return (
-		<>
-			<h1>Welcome to Next.js!</h1>
-			<Link href={"login"} id="login">
+		<div className="min-h-screen h-full w-full p-4 flex items-center justify-center flex-col gap-4">
+			<LinkCustom data-testid="login-link" href={"login"} id="login">
 				Login
-			</Link>
-		</>
+			</LinkCustom>
+		</div>
 	);
 }

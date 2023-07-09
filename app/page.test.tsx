@@ -1,16 +1,17 @@
+import { expect } from "@jest/globals";
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
-import "@testing-library/jest-dom";
-import { expect } from "@jest/globals";
 
 describe("Home", () => {
-	it("renders a heading", () => {
+	it("renders <Home />", () => {
+		const { container } = render(<Home />);
+		expect(container).toBeInTheDocument();
+	});
+
+	it("renders login link", async () => {
 		render(<Home />);
-
-		const heading = screen.getByRole("heading", {
-			name: /welcome to next\.js!/i,
-		});
-
-		expect(heading).toBeTruthy();
+		const loginLink = await screen.findByTestId("login-link");
+		expect(loginLink).toBeInTheDocument();
 	});
 });
