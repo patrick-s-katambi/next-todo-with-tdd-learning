@@ -121,4 +121,11 @@ describe("Login", () => {
 
 		expect(handleLoginSubmitMock).toHaveBeenCalledTimes(0);
 	});
+
+	it("shows a register link", async () => {
+		render(<Login />);
+
+		const registerLink = await screen.findByTestId("register-link");
+		expect(registerLink).toBeInTheDocument();
+	});
 });
