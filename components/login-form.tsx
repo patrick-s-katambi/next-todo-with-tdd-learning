@@ -28,13 +28,13 @@ const LoginForm: React.FC<LoginFormI> = ({ onSubmit }) => {
 				)}
 			>
 				<FieldSet
-					labelData={{ htmlFor: "email", label: "Your email address" }}
+					labelData={{ htmlFor: "email", label: "Email" }}
 					Element={
 						<Input
 							value={data.email}
 							onChange={(e) => dispatch({ type: "update", data: { email: e.target.value } })}
 							type="email"
-							placeholder="email"
+							placeholder="myemail@mail.com"
 							name="email"
 							data-testid="email-field"
 						/>
@@ -42,13 +42,13 @@ const LoginForm: React.FC<LoginFormI> = ({ onSubmit }) => {
 				/>
 
 				<FieldSet
-					labelData={{ htmlFor: "password", label: "Your password" }}
+					labelData={{ htmlFor: "password", label: "Password" }}
 					Element={
 						<Input
 							value={data.password}
 							onChange={(e) => dispatch({ type: "update", data: { password: e.target.value } })}
 							type="password"
-							placeholder="password"
+							placeholder="my-password"
 							name="password"
 							data-testid="password-field"
 						/>
